@@ -15,10 +15,10 @@ class Place(models.Model):
     views_count = models.IntegerField(default=0)
     is_publicated = models.BooleanField(default=True)
 
-def __str__(self):
-		return self.name
+    def __str__(self):
+        return self.name
 
-class Meta:
-		verbose_name = 'место'
-		verbose_name_plural = 'Места'
-		ordering = ['name']
+    class Meta:
+        verbose_name = 'место'
+        verbose_name_plural = 'Места'
+        ordering = ['name']
