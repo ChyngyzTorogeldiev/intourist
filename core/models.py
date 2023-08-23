@@ -6,7 +6,7 @@ class Profile(models.Model):
         to=User, on_delete=models.CASCADE,
         related_name='profile'
 	)
-region = models.CharField(max_length=1, choices=(
+	region = models.CharField(max_length=1, choices=(
     	('B', 'Bishkek'),
     	('C', 'Chuy'),
     	('I', 'Yssyk - Kol'),
@@ -16,10 +16,10 @@ region = models.CharField(max_length=1, choices=(
     	('J', 'Jalal-Abad'),
     	('A', 'Batken'),
 	))
-photo = models.ImageField(
+ 	photo = models.ImageField(
         upload_to='profile_photo',
         null=True, blank=True
 	)
 
-def __str__(self):
+ 	def __str__(self):
 		return self.user.username
